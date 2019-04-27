@@ -7,7 +7,7 @@ if($_SESSION['admin']=="")
 }
 else
 {
-	
+
 //logout
 if(isset($_POST['logout']))
 {
@@ -91,7 +91,7 @@ if(isset($_POST['aboutsave']))
      [ Page Content ]<br>
       <textarea placeholder="Input Content" name="aboutinfo"></textarea><br>
       <input type="submit" value="Save" name="aboutsave"><br><?php echo $confirm5; ?></p></center>
-      
+
       </td>
       <td width="40">&nbsp;</td>
       <td width="57">&nbsp;</td>

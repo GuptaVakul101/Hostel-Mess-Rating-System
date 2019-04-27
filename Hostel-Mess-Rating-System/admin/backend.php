@@ -8,7 +8,7 @@ if($_SESSION['admin']=="")
 }
 else
 {
-	
+
 //logout
 if(isset($_POST['logout']))
 {
@@ -64,6 +64,35 @@ if(isset($_POST['aboutsave']))
 	$confirm5 = "<b style='color:red'>Page Saved</b>";
 }
 ?>
+<style type="text/css" media="screen">
+#horizontalmenu ul
+{
+padding:1; margin:1; list-style:none;
+}
+#horizontalmenu li
+{
+float:left;
+position:relative;
+padding-right:50;
+display:block;
+border:0px solid #CC55FF;
+border-style:inset;
+}
+#horizontalmenu li ul
+{
+display:none;
+position:absolute;
+}
+#horizontalmenu li:hover ul{
+display:block;
+background:#C4C4C4;
+height:auto; width:8em;
+}
+#horizontalmenu li ul li
+{
+clear:both;
+border-style:none;}
+</style>
 <div align="center">
 <form method="post">
 <table width="1023" height="628" border="1">
@@ -74,6 +103,19 @@ if(isset($_POST['aboutsave']))
 	  <input type="submit" value="Logout" name="logout"></div>
 	  </a>	  </td>
     </tr>
+	<tr>
+      <td height="38" colspan="2" style="background-color:#6E68FF">
+      	<div id="horizontalmenu">
+        <ul>
+		<li><a href="index.php" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;" ><b>USER MANAGEMENT</b></a></li>
+        <li><a href="index.php?option=about" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>MESS MANAGEMENT</b></a></li>
+		<li><a href="index.php?option=contact" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>FEEDBACK MANAGEMENT</b></a></li>
+        <li><a href="index.php?option=gallery" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>LOGOUT</b></a></li>
+		 </ul>
+	 </div>
+      </td>
+    </tr>
+
     <tr>
       <td width="323" height="543">
       <center><p><b>[ Content of Header Marquee ]</b>
@@ -85,13 +127,13 @@ if(isset($_POST['aboutsave']))
       <center><p><b>Change College Intoduction</b><br>
       <textarea placeholder="Input Introduction for College" name="colgintro"></textarea><br>
       <input type="submit" value="Save" name="intsave"><br><?php echo $confirm3; ?></p></center><br>
-      
+
 	  <center><p><b>Change Footer</b><br>
       <input type="text" placeholder="copyright information etc," name="footerinfo" size="50"><br>
       <input type="submit" value="Save" name="footersave"><br><?php echo $confirm4; ?></p></center>      </td>
       <td width="684" valign="top">
-      
-	  
+
+
 	  <p><center><b>Edit "About" Page</b><br><br>
       Page Heading : <input type="text" placeholder="heading" name="abouthead" size="30"><br><br>
      [ Page Content ]<br>
