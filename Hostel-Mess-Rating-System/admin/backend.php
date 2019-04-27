@@ -99,22 +99,68 @@ border-style:none;}
   <tbody>
     <tr>
       <td colspan="2" bgcolor="#5D5CEC"><center><font size="+2"><strong style="color: #FFFFFF">Administrator Control Panel</strong></font></center><div align="right">
-	  <a href="adminlogout.php">
-	  <input type="submit" value="Logout" name="logout"></div>
-	  </a>	  </td>
+	  </td>
     </tr>
 	<tr>
       <td height="38" colspan="2" style="background-color:#6E68FF">
       	<div id="horizontalmenu">
         <ul>
-		<li><a href="index.php" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;" ><b>USER MANAGEMENT</b></a></li>
-        <li><a href="index.php?option=about" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>MESS MANAGEMENT</b></a></li>
-		<li><a href="index.php?option=contact" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>FEEDBACK MANAGEMENT</b></a></li>
-        <li><a href="index.php?option=gallery" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>LOGOUT</b></a></li>
+		<li><a href="backend.php?option=user_management" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;" ><b>USER MANAGEMENT</b></a></li>
+        <li><a href="backend.php?option=mess_management" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>MESS MANAGEMENT</b></a></li>
+		<li><a href="backend.php?option=feedback_management" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>FEEDBACK MANAGEMENT</b></a></li>
+        <li>
+			<a href="adminlogout.php" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>LOGOUT</b></a>
+		</li>
 		 </ul>
 	 </div>
       </td>
     </tr>
+	<tr>
+      <td colspan="2" height="647" bgcolor="#D9D9D9" style="vertical-align:text-top">
+      	<?php
+	@$opt = $_GET['option'];
+	@$subopt = $_GET['suboption'];
+	switch($opt)
+	{
+		case 'user_management':
+			switch ($subopt) {
+				case 'add_user':
+					include('user_add.php');
+				break;
+				case 'delete_or_modify_user':
+					include('user_del_or_mod.php');
+				break;
+				default:
+					include('user_add.php');
+				break;
+			}
+		break;
+		case 'mess_management':
+		include('mess_management.php');
+		break;
+		case 'feedback_management':
+		include('feedback_management.php');
+		break;
+
+		default:
+		switch ($subopt) {
+			case 'add_user':
+				include('user_add.php');
+			break;
+			case 'delete_or_modify_user':
+				include('user_del_or_mod.php');
+			break;
+			default:
+				include('user_add.php');
+			break;
+		}
+		break;
+
+	}
+
+	?>
+      </td>
+  </tr>
 
     <tr>
       <td width="323" height="543">
