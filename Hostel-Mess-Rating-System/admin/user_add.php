@@ -1,7 +1,6 @@
 <?php
 //connectivity
 //require('config.php');
-
 $q1 = "SELECT messName FROM mess";
 $result = mysqli_query($con,$q1);
 $str="";
@@ -14,7 +13,6 @@ if (mysqli_num_rows($result) > 0) {
 }
 if(isset($_POST['submit']))
 {
-
   $n = $_POST['uname'];
   $pass = $_POST['upass'];
   $p = md5($pass);//encrypt pass
@@ -25,7 +23,6 @@ if(isset($_POST['submit']))
   $reshos=$_POST['reshos'];
   $mess=$_POST['mess'];
   //$img = $_FILES['file']['name'];
-
   //check user if already exists
   $q = "SELECT roll_no FROM users WHERE roll_no='$n'";
   $cq = mysqli_query($con,$q);
@@ -39,13 +36,9 @@ if(isset($_POST['submit']))
   {
     $query = "INSERT INTO users VALUES ('$n','$p','$em','$gen','$mob','$reshos',0,0,0,0,0,0,0,0,0,0,0,0,'$mess','')";
     mysqli_query($con,$query);
-
     $str2= "<center><h2 style='color:green'>Details Saved!</h2></center>";
   }
-
-
 }
-
 //display details
 // if(isset($_POST['display']))
 // {

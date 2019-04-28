@@ -136,10 +136,30 @@ border-style:none;}
 			}
 		break;
 		case 'mess_management':
-		include('mess_management.php');
+		switch ($subopt) {
+			case 'add_mess':
+				include('mess_add.php');
+			break;
+			case 'delete_or_modify_mess':
+				include('mess_del_or_mod.php');
+			break;
+			default:
+				include('mess_add.php');
+			break;
+		}
 		break;
 		case 'feedback_management':
-		include('feedback_management.php');
+		switch ($subopt) {
+			case 'add_feedback':
+				include('feedback_add.php');
+			break;
+			case 'delete_or_modify_feedback':
+				include('feedback_del_or_mod.php');
+			break;
+			default:
+				include('feedback_add.php');
+			break;
+		}
 		break;
 
 		default:
@@ -162,21 +182,21 @@ border-style:none;}
       </td>
   </tr>
 
-    <tr>
+    <!-- <tr>
       <td width="323" height="543">
       <center><p><b>[ Content of Header Marquee ]</b>
       <textarea placeholder="Input Marquee for the header of the Page!" name="marquee1"></textarea><br>
-      <input type="submit" value="Save" name="m1save"><br><?php echo $confirm; ?>
+      <input type="submit" value="Save" name="m1save"><br>
       </p></center><br>
       <p><center><b>Change College Name : </b><br>
       <input type="text" placeholder="College Name" name="colgname" size="50"><input type="submit" value="Save" name="cnsave"><br><?php echo $confirm2; ?></center></p><br>
       <center><p><b>Change College Intoduction</b><br>
       <textarea placeholder="Input Introduction for College" name="colgintro"></textarea><br>
-      <input type="submit" value="Save" name="intsave"><br><?php echo $confirm3; ?></p></center><br>
+      <input type="submit" value="Save" name="intsave"><br></p></center><br>
 
 	  <center><p><b>Change Footer</b><br>
       <input type="text" placeholder="copyright information etc," name="footerinfo" size="50"><br>
-      <input type="submit" value="Save" name="footersave"><br><?php echo $confirm4; ?></p></center>      </td>
+      <input type="submit" value="Save" name="footersave"><br></p></center>      </td>
       <td width="684" valign="top">
 
 
@@ -184,8 +204,8 @@ border-style:none;}
       Page Heading : <input type="text" placeholder="heading" name="abouthead" size="30"><br><br>
      [ Page Content ]<br>
       <textarea placeholder="Input Content" name="aboutinfo"></textarea><br>
-      <input type="submit" value="Save" name="aboutsave"><br><?php echo $confirm5; ?></p></center>      </td>
-      </tr>
+      <input type="submit" value="Save" name="aboutsave"><br></p></center>      </td>
+      </tr> -->
   </tbody>
 </table>
 </form>
