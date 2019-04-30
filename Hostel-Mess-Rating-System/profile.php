@@ -83,27 +83,24 @@ if($_SESSION['user']=="")
 				</tr>
 				<tr>
 					<td height="38" colspan="2" style="background-color:#6E68FF">
+						<a href="profile.php?option=student_myprofile" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MY PROFILE</b></a>
 						<a href="profile.php?option=about" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ABOUT</b></a>
+						<a href="profile.php?option=contact" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTACT</b></a>
 						<a href="profile.php?option=cpassword" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CHANGE PASSWORD</b></a>
 						<a href="profile.php?option=cmess" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CHANGE MESS</b></a>
-						<a href="logout.php" style="text-decoration:none;margin-left:150px;"><input type="submit" value="Logout" name="logout"></a></td>
+						<a href="profile.php?option=mess_report" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MESS REPORT</b></a>
+						<a href="logout.php" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGOUT</b></a>
+					</td>
 					</tr>
 					<tr>
 						<td width="974" height="647" bgcolor="#D9D9D9" style="vertical-align:text-top">
 							<?php
 							@$opt = $_GET['option'];
-							if($opt=="")
-							{
-								?>
-								<html>
-								<h1><center>Welcome <?php echo $_SESSION['user']; ?></center></h1>
-								</html>
-								<?php
-								error_reporting(1);
-							}
-							else{
 								switch($opt)
 								{
+									case 'student_myprofile':
+									include('about.php');
+									break;
 									case 'about':
 									include('about.php');
 									break;
@@ -116,8 +113,13 @@ if($_SESSION['user']=="")
 									case 'cmess':
 									include('rfees.php');
 									break;
-
-								}}
+									case 'mess_report':
+									include('mess_report.php');
+									break;
+									default:
+									include('student_myprofile');
+									break;
+								}
 
 								?>
 
