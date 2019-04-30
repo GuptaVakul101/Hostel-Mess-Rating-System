@@ -116,6 +116,9 @@ if($_SESSION['user']=="")
 									case 'mess_report':
 									include('mess_report.php');
 									break;
+									case 'notification':
+									include('manager_notifications.php');
+									break;
 									default:
 									include('student_myprofile');
 									break;
