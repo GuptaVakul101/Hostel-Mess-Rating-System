@@ -111,7 +111,7 @@ if($_SESSION['user']=="")
 									include('student_cpassword.php');
 									break;
 									case 'cmess':
-									include('rfees.php');
+									include('student_cmess.php');
 									break;
 									case 'mess_report':
 									include('mess_report.php');
