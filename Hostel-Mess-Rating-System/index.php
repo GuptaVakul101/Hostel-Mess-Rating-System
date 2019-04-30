@@ -109,7 +109,8 @@ border-style:none;}
         <li><a href="index.php?option=gallery" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>GALLERY</b></a></li>
         <li><a href="index.php?option=course" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>COURSES</b></a></li>
 		<li><a href="index.php?option=regs" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>REGISTRATION</b></a></li>
-		<li><a href="index.php?option=login" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>LOGIN</b></a></li>
+		<li><a href="index.php?option=login" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>STUDENT LOGIN</b></a></li>
+		<li><a href="index.php?option=Mlogin" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>MANAGER LOGIN</b></a></li>
 		<li><a href="admin" onMouseOver="this.style.color='#FFFFFF'" onMouseOut="this.style.color='#353535'" style="color:#353535 ; text-decoration:none;"><b>ADMIN LOGIN</b></a></li>
 		 </ul>
 	 </div>
@@ -143,7 +144,10 @@ border-style:none;}
 		case 'login':
 		include('login.php');
 		break;
-        case 'about':
+		case 'Mlogin':
+		include('Mlogin.php');
+		break;
+    case 'about':
 		include('about.php');
 		break;
 		case 'contact':
