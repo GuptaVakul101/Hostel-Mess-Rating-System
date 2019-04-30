@@ -12,7 +12,7 @@ if(isset($_POST['login']))
 	$_SESSION['user']=$u;
 	$_SESSION['pass']=$p;
 //user check
-$q = "SELECT * FROM users WHERE username='$u' AND password='$p'";
+$q = "SELECT * FROM users WHERE roll_no='$u' AND password='$p'";
 $cq = mysqli_query($con,$q);
 $ret = mysqli_num_rows($cq);
 if($ret == true)
@@ -38,4 +38,4 @@ else
 </form>
 </div>
 </body>
-</html> 
+</html>
