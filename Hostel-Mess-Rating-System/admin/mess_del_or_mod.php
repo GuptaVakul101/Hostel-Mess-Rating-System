@@ -3,8 +3,11 @@ $IS_EDIT_CLICKED = false;
 $mess_array;
 if(isset($_POST['submit_del']))
 {
-    $id = $_POST['dummy'];
-    $query = "DELETE FROM mess WHERE messName=".$id;
+    $id =$_POST['dummy'];
+    $id="'$id'";
+    $id=substr($id,1,strlen($id)-2);
+    $query = "DELETE FROM mess WHERE messName=";
+    $query=$query."'$id'";
     mysqli_query($con,$query);
 }
 if(isset($_POST['submit_edit']))

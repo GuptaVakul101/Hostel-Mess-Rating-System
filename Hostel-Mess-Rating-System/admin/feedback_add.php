@@ -1,19 +1,12 @@
 <?php
-$q1 = "SELECT Keyword FROM Feedback";
+$q1 = "SELECT * FROM Feedback";
 $result = mysqli_query($con,$q1);
 $str="";
-echo "nnvgikdsnfdkrnkri";
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-
-    while($row = mysqli_fetch_array($result,MYSQLI_NUM)) {
-        echo (int)($row[1]);
-        if($row["is_Rejected"]){
-        }else{
-            if($row["is_Keyword"]){
-            }else{
-                $str=$str."<option value=\"".$row["Keyword"]."\">".$row["Keyword"]."</option>";
-            }
+    while($row = mysqli_fetch_array($result)) {
+        if(!$row["is_Rejected"] && !$row["is_Keyword"]){
+            $str=$str."<option value=\"".$row["Keyword"]."\">".$row["Keyword"]."</option>";
         }
     }
 }
@@ -21,8 +14,6 @@ if(isset($_POST['submit_man']))
 {
     $man_keyword = $_POST['man_keyword'];
     $man_rating = $_POST['man_rating'];
-    //$img = $_FILES['file']['name'];
-    //check feedback if already exists
     $q = "SELECT Keyword FROM Feedback WHERE Keyword='$man_keyword'";
     $cq = mysqli_query($con,$q);
     $ret = mysqli_num_rows($cq);
@@ -42,9 +33,9 @@ if(isset($_POST['submit_man']))
 
 if(isset($_POST['submit_req']))
 {
-    $req_keyword = $_POST['man_keyword'];
+    $req_keyword = $_POST['req_keyword'];
     $req_rating = $_POST['req_rating'];
-    $query = "INSERT INTO Feedback VALUES ('$req_keyword',$req_rating,false,true)";
+    $query = "UPDATE Feedback SET Rating = $req_rating , is_Keyword = 1 WHERE Keyword = '$req_keyword'";
     mysqli_query($con,$query);
     $str2= "<center><h2 style='color:green'>KEYWORD ADDED SUCCESSFULLY!!</h2></center>";
 }
@@ -102,9 +93,25 @@ if(isset($_POST['submit_req']))
                                 <fieldset style="display: inline-flex; background-color: #D8D8D8;">
                                     <legend><font size="+2"><strong>ADD KEYWORDS</strong></font></legend>
                                     <p><b> ADD MANUAL KEYWORD: </b><input type="text" name="man_keyword" required/>*</p>
-                                    <p><b>RATING</b><input type="text" name="man_rating" required/>*</p>
+                                    <p><b>RATING</b>
+                                        <select name="man_rating" required/>
+                                        <option value=0>0</option>
+                                        <option value=1>1</option>
+                                        <option value=2>2</option>
+                                        <option value=3>3</option>
+                                        <option value=4>4</option>
+                                        <option value=5>5</option>
+                                        <option value=6>6</option>
+                                        <option value=7>7</option>
+                                        <option value=8>8</option>
+                                        <option value=9>9</option>
+                                        <option value=10>10</option>
+                                    </select>
+                                    *</p>
                                     <p><input type="submit" name="submit_man" value="ADD"></p>
                                 </form>
+                            </div>
+                            <div align="center">
                                 <form method="post" enctype="multipart/form-data">
                                     <fieldset style="display: inline-flex; background-color: #D8D8D8;">
                                         <legend><font size="+2"><strong>ADD KEYWORDS</strong></font></legend>
@@ -115,12 +122,26 @@ if(isset($_POST['submit_req']))
                                             ?>
                                         </select>
                                         *</p>
-                                        <p><b>RATING</b><input type="text" name="req_rating" required/>*</p>
+                                        <p><b>RATING</b>
+                                            <select name="req_rating" required/>
+                                            <option value=0>0</option>
+                                            <option value=1>1</option>
+                                            <option value=2>2</option>
+                                            <option value=3>3</option>
+                                            <option value=4>4</option>
+                                            <option value=5>5</option>
+                                            <option value=6>6</option>
+                                            <option value=7>7</option>
+                                            <option value=8>8</option>
+                                            <option value=9>9</option>
+                                            <option value=10>10</option>
+                                        </select>
+                                        *</p>
                                         <p><input type="submit" name="submit_req" value="ADD"></p>
                                     </form>
-                            </div>
-                        </td>
-                    </tbody>
-                </table>
-            </body>
-            </html>
+                                </div>
+                            </td>
+                        </tbody>
+                    </table>
+                </body>
+                </html>
