@@ -1,8 +1,44 @@
 <?php
 //connectivity
 //require('config.php');
-error_reporting(1);
-$con = mysqli_connect("localhost","root","","hostel");
+$q1 = "SELECT messName FROM mess";
+$result = mysqli_query($con,$q1);
+$str="";
+$str2="";
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    $str=$str."<option value=\"".$row["messName"]."\">".$row["messName"]."</option>";
+  }
+}
+if(isset($_POST['submit']))
+{
+  $n = $_POST['uname'];
+  $pass = $_POST['upass'];
+  $p = md5($pass);//encrypt pass
+  $em = $_POST['umail'];
+  $gen = $_POST['gender'];
+  $mob = $_POST['umob'];
+  $add = $_POST['address'];
+  $reshos=$_POST['reshos'];
+  $mess=$_POST['mess'];
+  //$img = $_FILES['file']['name'];
+  //check feedback if already exists
+  $q = "SELECT roll_no FROM Feedback WHERE roll_no='$n'";
+  $cq = mysqli_query($con,$q);
+  $ret = mysqli_num_rows($cq);
+  if($ret == true)
+  {
+    $str2= "<center><h2 style='color:red'>feedback with same feedbackname(Roll) already exists</h2></center>";
+  }
+  //insert into database
+  else
+  {
+    $query = "INSERT INTO feedbacks VALUES ('$n','$p','$em','$gen','$mob','$reshos',0,0,0,0,0,0,0,0,0,0,0,0,'$mess','')";
+    mysqli_query($con,$query);
+    $str2= "<center><h2 style='color:green'>Details Saved!</h2></center>";
+  }
+}
 ?>
 <html>
 <head>
@@ -49,6 +85,44 @@ $con = mysqli_connect("localhost","root","","hostel");
             </div>
           </td>
         </tr>
+        <tr>
+          <td>
+            <div align="center">
+              <form method="post" enctype="multipart/form-data">
+                <fieldset style="display: inline-flex; background-color: #D8D8D8;">
+                  <legend><font size="+2"><strong>Registration</strong></font></legend>
+                  <p><b>feedbackName (Roll Number) : </b><input type="text" name="uname" required/>*</p>
+                  <p><b>Password : </b><input type="password" name="upass" required/>*</p>
+                  <p><b>Email : </b><input type="email" name="umail" required/>*</p>
+                  <p><b>Gender : </b><input type="radio" name="gender" value="m" >Male&nbsp;<input type="radio" name="gender" value="f">Female</p>
+                  <p><b>Mobile No. : </b><input type="text" name="umob" required/>*</p>
+                  <p><b>Residential Hostel : </b>
+                    <select name="reshos" required/>
+                    <option value="Kapli">Kapili</option>
+                    <option value="Lohit">Lohit</option>
+                    <option value="Brahmaputra">Brahmaputra</option>
+                    <option value="Kameng">Kameng</option>
+                    <option value="Barak">Barak</option>
+                    <option value="Umiam">Umiam</option>
+                    <option value="Manas">Manas</option>
+                    <option value="Dihing">Dihing</option>
+                    <option value="Dibang">Dibang</option>
+                    <option value="Subansri">Subansri</option>
+                    <option value="Dhansiri">Dhansiri</option>
+                  </select>
+                  *</p>
+                  <p><b>Mess Subscribed : </b>
+                    <select name="mess" required/>
+                    <?php
+                    echo $str;
+                    ?>
+                  </select>
+                  *</p>
+                  <p><input type="submit" name="submit" value="Register"></p>
+                </form>
+              </div>
+            </td>
+
 
           </tbody>
         </table>
