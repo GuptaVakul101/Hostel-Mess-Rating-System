@@ -10,12 +10,19 @@ if(isset($_POST['submit_del']))
 if(isset($_POST['submit_edit']))
 {
     $IS_EDIT_CLICKED = true;
-    $id = $_POST['dummy'];
+    $id =$_POST['dummy'];
+    $id="'$id'";
+    $id=substr($id,1,strlen($id)-2);
     echo $id;
-
-    $query = "SELECT * FROM mess WHERE messName =".$id;
+    $query = "SELECT * FROM mess WHERE messName=";
+    $query=$query."'$id'";
     echo $query;
     $details_mess = mysqli_query($con,$query);
+    $ret = mysqli_num_rows($details_mess);
+  	if($ret == true)
+  	{
+  		echo "bakchodi";
+  	}
     $mess_array = mysqli_fetch_array($details_mess,MYSQLI_NUM);
     echo $mess_array;
     echo $mess_array[0];
@@ -95,7 +102,7 @@ if(isset($_POST['submit']))
                 echo "<tr>";
                 echo "<td>";
                 echo "<form method=\"post\">";
-                echo "<td><input type=\"hidden\" name=\"dummy\" value=\" ". $row['messName'] . "\">" . $row['messName'] . "</td>";
+                echo "<td><input type=\"hidden\" name=\"dummy\" value=\"". $row['messName'] . "\">" . $row['messName'] . "</td>";
                 echo "<td>" . $row['managerUsername'] . "</td>";
                 echo('<td><input type="submit" name="submit_del" value="DELETE"/> </td>');
                 echo('<td><input type="submit" name="submit_edit" value="EDIT"/> </td>');

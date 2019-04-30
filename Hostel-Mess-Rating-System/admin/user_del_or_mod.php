@@ -98,6 +98,12 @@ if(isset($_POST['submit']))
             $cq = mysqli_query($con,$q);
             echo "<table height=\"200\" style=\"overflow:scroll\">";
             echo "<tbody>";
+            echo "<tr>";
+              echo "<td height=\"30\" bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>Course</b></font></center></td>";
+              echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>Intake</b></font></center></td>";
+              echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>Duration</b></font></center></td>";
+              echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>Other</b></font></center></td>";
+            echo "</tr>";
             while ($row = mysqli_fetch_assoc($cq)) {
                 $id = $row['roll_no'];
                 echo "<tr>";

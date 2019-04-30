@@ -30,7 +30,7 @@ $footerdisp = mysqli_fetch_array($q41);
 ?>
 <html>
 <head>
-<title>Sample School Project</title>
+<title>HOSTEL MESS RATING SYSTEM</title>
 <link rel="stylesheet" type="text/css" href="engine/css/slideshow.css" media="screen" />
 	<style type="text/css">.slideshow a#vlb{display:none}</style>
 	<script type="text/javascript" src="engine/js/mootools.js"></script>
