@@ -89,6 +89,7 @@ if($_SESSION['user']=="")
 						<a href="profile.php?option=cpassword" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CHANGE PASSWORD</b></a>
 						<a href="profile.php?option=cmess" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CHANGE MESS</b></a>
 						<a href="profile.php?option=mess_report" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MESS REPORT</b></a>
+						<a href="profile.php?option=add_feedback" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD FEEDBACK</b></a>
 						<a href="logout.php" style="text-decoration:none ; color:#010101"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGOUT</b></a>
 					</td>
 					</tr>
@@ -115,6 +116,9 @@ if($_SESSION['user']=="")
 									break;
 									case 'mess_report':
 									include('mess_report.php');
+									break;
+									case 'add_feedback':
+									include('add_feedback.php');
 									break;
 									default:
 									include('student_myprofile');

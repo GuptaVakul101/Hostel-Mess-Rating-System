@@ -27,8 +27,6 @@ if(isset($_POST['submit']))
   //insert into database
   else
   {
-    $query = "INSERT INTO users VALUES ('$n','$p','$em','$gen','$mob','$reshos',0,0,0,0,0,0,0,0,0,0,0,0,'$mess','')";
-    mysqli_query($con,$query);
     $str2= "<center><h2 style='color:red'>Old Password is Incorrect</h2></center>";
   }
 }

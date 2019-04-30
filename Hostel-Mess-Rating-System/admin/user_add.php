@@ -39,38 +39,6 @@ if(isset($_POST['submit']))
     $str2= "<center><h2 style='color:green'>Details Saved!</h2></center>";
   }
 }
-//display details
-// if(isset($_POST['display']))
-// {
-// 	$que = mysqli_query($con,"select * from users");
-//
-// 	echo "<div align='center'>";
-// 	echo "<table border='1' bgcolor='#B2B8FF' width='500px'>";
-// 	echo "<tr><th>User ID</th><th>UserName</th><th>Password<br>(Encrypted)</th><th>Email</th><th>Gender</th><th>Mobile No.</th><th>Image</th><th>Option</th></tr>";
-//
-// 	while($row= mysqli_fetch_array($que))
-// 	{
-// 	echo "<tr>";
-// 	echo "<td>".$row['id']."</td>";
-// 	echo "<td>".$row['username']."</td>";
-// 	echo "<td>".$row['password']."</td>";
-// 	echo "<td>".$row['email']."</td>";
-// 	echo "<td>".$row['gender']."</td>";
-// 	echo "<td>".$row['mob']."</td>";
-//
-// 	$e=$row['email'];
-// 	$img=$row['image'];
-//
-// 	echo "<td><img src='images/$e/$img' width='70' height='70'/></td>";
-//
-// 	echo "<td><a href='edit.php'>Edit</a>&nbsp;&nbsp;
-// 		<a href='delete.php?email=$e'>Delete</a>
-// 	</td>";
-// 	echo "</tr>";
-// 	}
-// 	echo "</table>";
-// 	echo "</div>";
-// }
 ?>
 <html>
 <head>
