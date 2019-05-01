@@ -84,23 +84,28 @@ if(isset($_POST['submit']))
             <?php
             $q = "SELECT * FROM Feedback";
             $cq = mysqli_query($con,$q);
-            echo "<table height=\"200\" style=\"overflow:scroll\">";
+            echo "<table width=\"725\" height=\"320\" border=\"1\" style=\"overflow:scroll\">";
             echo "<tbody>";
+            echo "<tr>";
+            echo "<td height=\"50\" bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>KEYWORD</b></font></center></td>";
+            echo "<td height=\"50\" bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>RATING</b></font></center></td>";
+            echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>ACTION</b></font></center></td>";
+            echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>ACTION</b></font></center></td>";
+            echo "</tr>";
             while ($row = mysqli_fetch_assoc($cq)) {
                 if($row['is_Keyword']==1 && $row['is_Rejected']==0){
                     $id = $row['Keyword'];
                     echo "<tr>";
-                    echo "<td>";
                     echo "<form method=\"post\">";
-                    echo "<td><input type=\"hidden\" name=\"dummy\" value=\"". $row['Keyword'] . "\">" . $row['Keyword'] . "</td>";
-                    echo "<td>" . $row['Rating'] . "</td>";
-                    echo('<td><input type="submit" name="submit_del" value="DELETE"/> </td>');
-                    echo('<td><input type="submit" name="submit_edit" value="EDIT"/> </td>');
+                    echo "<td align = \"center\" height=\"40\" bgcolor=\"#B4BEDC\"><input type=\"hidden\" name=\"dummy\" value=\"". $row['Keyword'] . "\">" . $row['Keyword'] . "</td>";
+                    echo "<td align = \"center\"  bgcolor=\"#B4BEDC\">" . $row['Rating'] . "</td>";
+                    echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input type=\"submit\" name=\"submit_del\" value=\"DELETE\"/> </td>");
+                    echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input type=\"submit\" name=\"submit_edit\" value=\"EDIT\"/> </td>");
                     echo "</form>";
-                    echo "</td>";
                     echo "</tr>";
                 }
             }
+            echo "<tr> <td> </td> <td> </td> <td> </td> <td> </td></tr>";
             echo "</tbody>";
             echo "</table>";
             ?>

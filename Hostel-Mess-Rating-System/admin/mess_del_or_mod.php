@@ -16,21 +16,11 @@ if(isset($_POST['submit_edit']))
     $id =$_POST['dummy'];
     $id="'$id'";
     $id=substr($id,1,strlen($id)-2);
-    echo $id;
     $query = "SELECT * FROM mess WHERE messName=";
     $query=$query."'$id'";
-    echo $query;
     $details_mess = mysqli_query($con,$query);
     $ret = mysqli_num_rows($details_mess);
-  	if($ret == true)
-  	{
-  		echo "bakchodi";
-  	}
     $mess_array = mysqli_fetch_array($details_mess,MYSQLI_NUM);
-    echo $mess_array;
-    echo $mess_array[0];
-    echo $mess_array[1];
-
 }
 
 if(isset($_POST['submit']))
@@ -98,21 +88,26 @@ if(isset($_POST['submit']))
             <?php
             $q = "SELECT * FROM mess";
             $cq = mysqli_query($con,$q);
-            echo "<table height=\"200\" style=\"overflow:scroll\">";
+            echo "<table width=\"725\" height=\"320\" border=\"1\" style=\"overflow:scroll\">";
             echo "<tbody>";
+            echo "<tr>";
+            echo "<td height=\"50\" bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>MESS NAME</b></font></center></td>";
+            echo "<td height=\"50\" bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>MESS MANAGER USERNAME</b></font></center></td>";
+            echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>ACTION</b></font></center></td>";
+            echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>ACTION</b></font></center></td>";
+            echo "</tr>";
             while ($row = mysqli_fetch_assoc($cq)) {
                 $id = $row['messName'];
                 echo "<tr>";
-                echo "<td>";
                 echo "<form method=\"post\">";
-                echo "<td><input type=\"hidden\" name=\"dummy\" value=\"". $row['messName'] . "\">" . $row['messName'] . "</td>";
-                echo "<td>" . $row['managerUsername'] . "</td>";
-                echo('<td><input type="submit" name="submit_del" value="DELETE"/> </td>');
-                echo('<td><input type="submit" name="submit_edit" value="EDIT"/> </td>');
+                echo "<td align = \"center\" height=\"40\" bgcolor=\"#B4BEDC\"><input type=\"hidden\" name=\"dummy\" value=\"". $row['messName'] . "\">" . $row['messName'] . "</td>";
+                echo "<td align = \"center\"  bgcolor=\"#B4BEDC\">" . $row['managerUsername'] . "</td>";
+                echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input type=\"submit\" name=\"submit_del\" value=\"DELETE\"/> </td>");
+                echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input type=\"submit\" name=\"submit_edit\" value=\"EDIT\"/> </td>");
                 echo "</form>";
-                echo "</td>";
                 echo "</tr>";
             }
+            echo "<tr> <td> </td> <td> </td> <td> </td> <td> </td></tr>";
             echo "</tbody>";
             echo "</table>";
             ?>
