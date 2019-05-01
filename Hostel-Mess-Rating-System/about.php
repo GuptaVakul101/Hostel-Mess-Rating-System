@@ -1,17 +1,4 @@
-<?php
-//change about 
-$q5 = "SELECT abouthead FROM admin WHERE id=1";
-$q51 = mysqli_query($con,$q5);
-$disp = mysqli_fetch_array($q51);
-//echo $disp['abouthead'];
 
-$q6 = "SELECT aboutinfo FROM admin WHERE id=1";
-$q61 = mysqli_query($con,$q6);
-$disp2 = mysqli_fetch_array($q61);
+<h1 style="color:#000000"><b><u><center>About us</center></u></b></h1>
 
-
-?>
-<h1 style="color:#000000"><b><u><center><?php echo $disp['abouthead']; ?></center></u></b></h1>
-
-<h3><b>Our mission</b></h3>
-<font size="+1"><?php echo $disp2['aboutinfo']; ?></font>
+<font size="+2">Indian Institute of Technology Guwahati, the sixth member of the IIT fraternity, was established in 1994. The academic programme of IIT Guwahati commenced in 1995. At present the Institute has eleven departments and five inter-disciplinary academic centres covering all the major engineering, science and humanities disciplines, offering BTech, BDes, MA, MDes, MTech, MSc and PhD programmes. Within a short period of time, IIT Guwahati has been able to build up world class infrastructure for carrying out advanced research and has been equipped with state-of-the-art scientific and engineering instruments.Indian Institute of Technology Guwahati's campus is on a sprawling 285 hectares plot of land on the north bank of the river Brahmaputra around 20 kms. from the heart of the city. With the majestic Brahmaputra on one side, and with hills and vast open spaces on others, the campus provides an ideal setting for learning.</font>
