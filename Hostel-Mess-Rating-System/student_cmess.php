@@ -24,6 +24,7 @@ if(isset($_POST['submit']))
     <tr>
       <td>
         <div align="center">
+            <span style = "display:inline-grid;border:2px solid">
           <form method="post" enctype="multipart/form-data">
             <fieldset style="display: inline-flex; background-color: #D8D8D8;">
               <legend><font size="+2"><strong>Change Mess Request</strong></font></legend>
@@ -36,6 +37,7 @@ if(isset($_POST['submit']))
               *</p>
               <p><input class="btn btn-success" type="submit" name="submit" value="Send Request"></p>
             </form>
+            <span>
           </div>
         </td>
         <?php echo $str2; ?>

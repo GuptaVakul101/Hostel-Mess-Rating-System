@@ -30,12 +30,14 @@ else
 <html>
 <body style="background-color:#E5E5E5">
 <div align="center" >
+	<span style = "display:inline-grid;border:2px solid">
 <form method="post">
 <fieldset style="display: inline-flex; background-color: #D8D8D8;"><legend><font size="+2"><strong>Login Panel</strong></font></legend><p><b>UserName : </b><input type="text" name="uname" required/>*</p>
 <p><b>Password : </b><input type="password" name="upass" required/>*</p><br>
 <p><input class="btn btn-success" type="submit" value="Login" name="login"/></p>
 </fieldset>
 </form>
+</span>
 </div>
 </body>
 </html>

@@ -22,6 +22,7 @@ if(isset($_POST['admlogin']))
 }
 ?>
 <div align="center">
+	<span style = "display:inline-grid;border:2px solid">
 <form method="post">
 <table width="1067" height="493" border="1" align = "center">
   <tbody>
@@ -40,4 +41,5 @@ if(isset($_POST['admlogin']))
   </tbody>
 </table>
 </form>
+</span>
 </div>

@@ -99,6 +99,7 @@ if(isset($_POST['submit_reject']))
                 <tr>
                     <td>
                         <div align="center">
+                            <span style = "display:inline-grid;border:2px solid">
                             <form method="post" enctype="multipart/form-data">
                                 <fieldset style="display: inline-flex; background-color: #D8D8D8;">
                                     <legend><font size="+2"><strong>ADD KEYWORDS</strong></font></legend>
@@ -120,8 +121,12 @@ if(isset($_POST['submit_reject']))
                                     *</p>
                                     <p><input class="btn btn-success" type="submit" name="submit_man" value="ADD KEYWORD"></p>
                                 </form>
+                                <span>
                             </div>
+                            <br>
+                            <br>
                             <div align="center">
+                                <span style = "display:inline-grid;border:2px solid">
                                 <form method="post" enctype="multipart/form-data">
                                     <fieldset style="display: inline-flex; background-color: #D8D8D8;">
                                         <legend><font size="+2"><strong>ADD KEYWORDS</strong></font></legend>
@@ -150,6 +155,7 @@ if(isset($_POST['submit_reject']))
                                         <p><input class="btn btn-success" type="submit" name="submit_req" value="ADD KEYWORD">
                                         <input class="btn btn-danger" type="submit" name="submit_reject" value="REJECT KEYWORD"></p>
                                     </form>
+                                </span>
                                 </div>
                             </td>
                         </tbody>

@@ -88,6 +88,7 @@ if(isset($_POST['submit']))
         <tr>
           <td>
             <div align="center">
+                <span style = "display:inline-grid;border:2px solid">
               <form method="post" enctype="multipart/form-data">
                 <fieldset style="display: inline-flex; background-color: #D8D8D8;">
                   <legend><font size="+2"><strong>Registration</strong></font></legend>
@@ -120,6 +121,7 @@ if(isset($_POST['submit']))
                   *</p>
                   <p><input class="btn btn-success" type="submit" name="submit" value="Register"></p>
                 </form>
+            </span>
               </div>
             </td>
 

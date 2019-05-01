@@ -96,12 +96,15 @@ if(isset($_POST['submit']))
                 if($row['is_Keyword']==1 && $row['is_Rejected']==0){
                     $id = $row['Keyword'];
                     echo "<tr>";
+                    echo "<span style = \"display:inline-grid;border:2px solid\">";
                     echo "<form method=\"post\">";
+
                     echo "<td align = \"center\" height=\"40\" bgcolor=\"#B4BEDC\"><input type=\"hidden\" name=\"dummy\" value=\"". $row['Keyword'] . "\">" . $row['Keyword'] . "</td>";
                     echo "<td align = \"center\"  bgcolor=\"#B4BEDC\">" . $row['Rating'] . "</td>";
                     echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input class=\"btn btn-danger\" type=\"submit\" name=\"submit_del\" value=\"DELETE\"/> </td>");
                     echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input class=\"btn btn-info\" type=\"submit\" name=\"submit_edit\" value=\"EDIT\"/> </td>");
                     echo "</form>";
+                    echo "</span>";
                     echo "</tr>";
                 }
             }
@@ -110,11 +113,14 @@ if(isset($_POST['submit']))
             echo "</table>";
             ?>
         </div>
+        <br>
+        <br>
         <?php
 
         if($IS_EDIT_CLICKED){
             ?>
             <div align = "center">
+                <span style = "display:inline-grid;border:2px solid">
                 <form method="post" enctype="multipart/form-data">
                     <fieldset style="display: inline-flex; background-color: #D8D8D8;">
                         <legend><font size="+2"><strong>UPDATE feedback</strong></font></legend>
@@ -136,6 +142,7 @@ if(isset($_POST['submit']))
                         *</p>
                         <p><input class="btn btn-success" type="submit" name="submit" value="UPDATE"></p>
                     </form>
+                </span>
                 </div>
                 <?php
             }

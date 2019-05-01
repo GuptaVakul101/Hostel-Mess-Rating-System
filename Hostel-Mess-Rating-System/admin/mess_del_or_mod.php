@@ -101,7 +101,9 @@ if(isset($_POST['submit']))
             while ($row = mysqli_fetch_assoc($cq)) {
                 $id = $row['messName'];
                 echo "<tr>";
+                echo "<span style = \"display:inline-grid;border:2px solid\">";
                 echo "<form method=\"post\">";
+
                 echo "<td align = \"center\" height=\"40\" bgcolor=\"#B4BEDC\"><input type=\"hidden\" name=\"dummy\" value=\"". $row['messName'] . "\">" . $row['messName'] . "</td>";
                 echo "<td align = \"center\"  bgcolor=\"#B4BEDC\">" . $row['managerUsername'] . "</td>";
                 echo "<td align = \"center\"  bgcolor=\"#B4BEDC\">" . $row['email'] . "</td>";
@@ -109,18 +111,22 @@ if(isset($_POST['submit']))
                 echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input class=\"btn btn-danger\" type=\"submit\" name=\"submit_del\" value=\"DELETE\"/> </td>");
                 echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input class=\"btn btn-info\" type=\"submit\" name=\"submit_edit\" value=\"EDIT\"/> </td>");
                 echo "</form>";
+                echo "</span>";
                 echo "</tr>";
             }
             echo "<tr> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td></tr>";
             echo "</tbody>";
             echo "</table>";
             ?>
+            <br>
+            <br>
         </div>
         <?php
 
         if($IS_EDIT_CLICKED){
             ?>
             <div align = "center">
+                <span style = "display:inline-grid;border:2px solid">
                 <form method="post" enctype="multipart/form-data">
                     <fieldset style="display: inline-flex; background-color: #D8D8D8;">
                         <legend><font size="+2"><strong>UPDATE MESS</strong></font></legend>
@@ -130,6 +136,7 @@ if(isset($_POST['submit']))
                         <p><b>CONTACT : </b><input type="text" name="manager_contact" value ="<?php echo $mess_array[4]; ?>" required/>*</p>
                         <p><input class="btn btn-success" type="submit" name="submit" value="UPDATE"></p>
                     </form>
+                </span>
                 </div>
                 <?php
             }

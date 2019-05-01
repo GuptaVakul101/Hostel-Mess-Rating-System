@@ -84,6 +84,8 @@ if(isset($_POST["submit"])){
             }
         }
     }
+    $str10 = "<center><h4 style='color:green'>ASSIGNMENT OF RATING TO ALL MESSES SUCCESSFULLY UPDATED </h4></center> <center><h4 style='color:green'> SHOW CAUSE NOTICES SENT </h4></center>  <center><h4 style='color:green'> STUDENT MESS CHANGE REQUEST APPROVED </h4></center>";
+    // $str2= "<center><h2 style='color:green'>Details Saved!</h2></center>";
 }
 if(isset($_POST["submit2"])){
     $admin_row=mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM admin"));
@@ -92,6 +94,8 @@ if(isset($_POST["submit2"])){
     $dum = (string)($next_month);
     $query21 = "UPDATE admin SET Current_Month = '$dum' WHERE auser ='admin'";
     mysqli_query($con,$query21);
+    $str10 = "<center><h4 style='color:green'>MONTH UPDATED SUCCESSFULLY </h4></center>";
+
 }
 ?>
 
@@ -99,10 +103,21 @@ if(isset($_POST["submit2"])){
 <head>
 </head>
 <body style="background-color:#E5E5E5">
-    <div align = "center" style = "border-style: solid" height = "200" wrap="hard">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div align = "center" height = "200" wrap="hard" >
         <form method="post" enctype="multipart/form-data">
-            <p><input class="btn btn-info" type="submit" name="submit" value="EVALUATE FEEDBACK"></p>
-            <p><input class="btn btn-info" type="submit" name="submit2" value="CHANGE CURRENT MONTH"></p>
+            <p><input class="btn btn-info btn-lg" type="submit" name="submit" value="EVALUATE FEEDBACK"></p>
+            <p><input class="btn btn-info btn-lg" type="submit" name="submit2" value="CHANGE CURRENT MONTH"></p>
         </form>
     </div>
     <?php echo $str10 ?>

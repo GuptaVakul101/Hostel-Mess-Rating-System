@@ -38,6 +38,7 @@ if(isset($_POST['submit']))
     <tr>
       <td>
         <div align="center">
+            <span style = "display:inline-grid;border:2px solid">
           <form method="post" enctype="multipart/form-data">
             <fieldset style="display: inline-flex; background-color: #D8D8D8;">
               <legend><font size="+2"><strong>Change Password</strong></font></legend>
@@ -46,6 +47,7 @@ if(isset($_POST['submit']))
               <p><b>Retype New Password : </b><input type="password" name="npass2" required/>*</p>
               <p><input class="btn btn-info" type="submit" name="submit" value="Change Password"></p>
             </form>
+        </span>
           </div>
         </td>
         <?php echo $str2; ?>

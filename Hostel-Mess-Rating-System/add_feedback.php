@@ -37,6 +37,7 @@ if(isset($_POST['submit']))
 ?>
 
 <div align="center">
+    <span style = "display:inline-grid;border:2px solid">
     <form method="post" enctype="multipart/form-data">
         <fieldset style="display: inline-flex; background-color: #D8D8D8;">
             <legend><font size="+2"><strong>FEEDBACK FORM</strong></font></legend>
@@ -44,4 +45,5 @@ if(isset($_POST['submit']))
             <p><b>FEEDBACK : </b><textarea class="FormElement" name="term" id="term" cols="40" rows="4" wrap="soft"></textarea>*</p>
             <p><input class="btn btn-success" type="submit" name="submit" value="ADD FEEDBACK"></p>
         </form>
+    </span>
     </div>

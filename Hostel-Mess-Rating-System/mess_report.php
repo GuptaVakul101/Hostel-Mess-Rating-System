@@ -44,6 +44,7 @@ if(isset($_POST['submit']))
 }
 ?>
 <div align = "center">
+    <span style = "display:inline-grid;border:2px solid">
 <form method="post" enctype="multipart/form-data">
 <h2><b>Mess Subscribed : </b>
   <select name="mess" required/>
@@ -54,6 +55,7 @@ if(isset($_POST['submit']))
 </h2>
 <p><input class="btn btn-info" type="submit" name="submit" value="SELECT"></p>
 </form>
+</span>
 </div>
 
 
