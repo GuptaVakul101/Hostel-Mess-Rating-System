@@ -50,10 +50,11 @@ if($_SESSION['user']=="")
 		border-style:none;}
 		</style>
 	</head>
+	<body style="background-image:linear-gradient(white,black)">
 	<table width="1050px" align="center"  border="1">
 		<tbody>
 			<tr>
-				<th height="39" colspan="2" style="background-color:#4E4E4E"><div style="text-align:left;color:#FFFFFF"><b><font size="+3"><a href="index.php" style="text-decoration:none ; color:#FFFFFF">ABC Group Of Institutions</a></font></b><marquee direction="left" height="100%">
+				<th height="39" colspan="2" style="background-color:#4E4E4E"><div style="text-align:left;color:#FFFFFF"><b><font size="+3"><a href="index.php" style="text-decoration:none ; color:#FFFFFF">Indian Institute of Technology, Guwahati</a></font></b><marquee direction="left" height="100%">
 					Mess Management Portal is now Online!</marquee></div></th>
 				</tr>
 				<tr>
@@ -94,7 +95,7 @@ if($_SESSION['user']=="")
 					</td>
 					</tr>
 					<tr>
-						<td width="974" height="647" bgcolor="#D9D9D9" style="vertical-align:text-top">
+						<td width="974" height="647" bgcolor="#D9D9D9" style="vertical-align:middle">
 							<?php
 							@$opt = $_GET['option'];
 								switch($opt)
@@ -140,8 +141,9 @@ if($_SESSION['user']=="")
 							</td>
 						</tr>
 						<tr>
-							<td height="25" colspan="2" style="background-color:#B8AFFF"><center><b>&copy; 2014 by UserName | Managed by ABC</b></center></td>
+							<td height="25" colspan="2" style="background-color:#B8AFFF"><center><b>&copy; Managed by VAKUL GUPTA and UTKARSH JAIN</b></center></td>
 						</tr>
 					</tbody>
 				</table>
+				<body>
 				</html>

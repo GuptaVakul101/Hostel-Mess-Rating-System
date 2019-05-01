@@ -93,6 +93,7 @@ else
 		clear:both;
 		border-style:none;}
 	</style>
+	<body style="background-image:linear-gradient(white,black)">
 	<div align="center">
 		<form method="post">
 			<table width="1023" height="628" border="1">
@@ -187,6 +188,7 @@ else
 					</table>
 				</form>
 			</div>
+		</body>
 			<?php
 		}
 		?>

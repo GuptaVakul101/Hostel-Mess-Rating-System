@@ -29,18 +29,18 @@ if(isset($_POST['submit']))
     $mess=$_POST['mess'];
     $query = "SELECT * FROM mess WHERE messName='$mess'";
     $details_mess = mysqli_fetch_array(mysqli_query($con,$query),MYSQLI_NUM);
-    $feedback1 = $details_mess[3];
-    $feedback2 = $details_mess[4];
-    $feedback3 = $details_mess[5];
-    $feedback4 = $details_mess[6];
-    $feedback5 = $details_mess[7];
-    $feedback6 = $details_mess[8];
-    $feedback7 = $details_mess[9];
-    $feedback8 = $details_mess[10];
-    $feedback9 = $details_mess[11];
-    $feedback10 = $details_mess[12];
-    $feedback11 = $details_mess[13];
-    $feedback12 = $details_mess[14];
+    $feedback1 = $details_mess[5];
+    $feedback2 = $details_mess[6];
+    $feedback3 = $details_mess[7];
+    $feedback4 = $details_mess[8];
+    $feedback5 = $details_mess[9];
+    $feedback6 = $details_mess[10];
+    $feedback7 = $details_mess[11];
+    $feedback8 = $details_mess[12];
+    $feedback9 = $details_mess[13];
+    $feedback10 = $details_mess[14];
+    $feedback11 = $details_mess[15];
+    $feedback12 = $details_mess[16];
 }
 ?>
 <div align = "center">

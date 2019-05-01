@@ -4,27 +4,27 @@ session_start();
 //connectivity
 require('config.php');
 
-//marquee display
-$q = "SELECT marquee1 FROM admin WHERE id=1";
-$q1 = mysqli_query($con,$q);
-$disp = mysqli_fetch_array($q1);
-//echo $disp['marquee1'];
-
-//change colg name
-$q2 = "SELECT colgname FROM admin WHERE id=1";
-$q21 = mysqli_query($con,$q2);
-$colgdisp = mysqli_fetch_array($q21);
-
-//change intro content
-$q3 = "SELECT colgintro FROM admin WHERE id=1";
-$q31 = mysqli_query($con,$q3);
-$introdisp = mysqli_fetch_array($q31);
-//echo $introdisp['colgintro'];
-
-//change footer
-$q4 = "SELECT footerinfo FROM admin WHERE id=1";
-$q41 = mysqli_query($con,$q4);
-$footerdisp = mysqli_fetch_array($q41);
+// //marquee display
+// $q = "SELECT marquee1 FROM admin WHERE id=1";
+// $q1 = mysqli_query($con,$q);
+// $disp = mysqli_fetch_array($q1);
+// //echo $disp['marquee1'];
+//
+// //change colg name
+// $q2 = "SELECT colgname FROM admin WHERE id=1";
+// $q21 = mysqli_query($con,$q2);
+// $colgdisp = mysqli_fetch_array($q21);
+//
+// //change intro content
+// $q3 = "SELECT colgintro FROM admin WHERE id=1";
+// $q31 = mysqli_query($con,$q3);
+// $introdisp = mysqli_fetch_array($q31);
+// //echo $introdisp['colgintro'];
+//
+// //change footer
+// $q4 = "SELECT footerinfo FROM admin WHERE id=1";
+// $q41 = mysqli_query($con,$q4);
+// $footerdisp = mysqli_fetch_array($q41);
 //echo $footerdisp['footerinfo'];
 
 ?>
@@ -68,11 +68,12 @@ $footerdisp = mysqli_fetch_array($q41);
 		border-style:none;}
 	</style>
 </head>
+<body style="background-image:linear-gradient(white,black)">
 <table width="1050px" align="center"  border="1">
 	<tbody>
 		<tr>
-			<th height="39" colspan="2" style="background-color:#4E4E4E"><div style="text-align:left;color:#FFFFFF"><b><font size="+3"><a href="index.php" style="text-decoration:none ; color:#FFFFFF"><?php echo $colgdisp['colgname'];?></a></font></b><marquee direction="left" height="100%">
-				<?php echo $disp['marquee1']; ?></marquee></div></th>
+			<th height="39" colspan="2" style="background-color:#4E4E4E"><div style="text-align:left;color:#FFFFFF"><b><font size="+3"><a href="index.php" style="text-decoration:none ; color:#FFFFFF">Indian Institute of Technology, Guwahati</a></font></b><marquee direction="left" height="100%">
+				Mess Management Portal is now Online!</marquee></div></th>
 			</tr>
 			<tr>
 				<th height="317" colspan="2">
@@ -128,7 +129,7 @@ $footerdisp = mysqli_fetch_array($q41);
 						<center><img src="images/img.jpg" width="696" height="488"></center>
 						<p><center>
 							<p>&nbsp;</p>
-							<p><strong><font size="+2"><?php echo $colgdisp['colgname'];?></font></strong> <b>-</b> <font size="+1"><?php echo $introdisp['colgintro']; ?></font></p>
+							<p><strong><font size="+2"><?php echo $colgdisp['colgname'];?></font></strong> <b>-</b> <font size="+1"><?php echo "INDIAN INSTITUTE OF TECHNOLOGY,GUWAHATI"; ?></font></p>
 						</center></p>
 						<?php
 						error_reporting(1);
@@ -170,10 +171,11 @@ $footerdisp = mysqli_fetch_array($q41);
 					</td>
 				</tr>
 				<tr>
-					<td height="25" colspan="2" style="background-color:#B8AFFF"><center><b>&copy; <?php echo $footerdisp['footerinfo']; ?></b></center>
+					<td height="25" colspan="2" style="background-color:#B8AFFF"><center><b>&copy; Managed by VAKUL GUPTA and UTKARSH JAIN</b></center>
 						<div align="right"><a href="#facebook"><img src="images/f.png" width="30" height="30" alt=""/></a><a href="#twitter"><img src="images/t.png" width="30" height="30" alt=""/></a><a href="#youtube">
 							<img src="images/y.png" width="30" height="30" alt=""/></a></div></td>
 					</tr>
 				</tbody>
 			</table>
+		</body>
 			</html>

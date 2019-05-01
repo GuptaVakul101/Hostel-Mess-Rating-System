@@ -33,7 +33,7 @@ if(isset($_POST['submit']))
 ?>
 <body>
 <div align="center">
-<table width="1058" height="204" border="0">
+<table width="600" height="204" border="0">
   <tbody>
     <tr>
       <td>

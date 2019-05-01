@@ -8,6 +8,8 @@ if(isset($_POST['submit']))
   $mname = $_POST['messname'];
   $mmuname = $_POST['mess_manager_uname'];
   $pass = $_POST['pass'];
+  $f1 = $_POST['mess_manager_email'];
+  $f2 = $_POST['mess_manager_contact'];
   $p = md5($pass);//encrypt pass
   //check user if already exists
   $q = "SELECT messName FROM mess WHERE messName='$mname'";
@@ -20,7 +22,7 @@ if(isset($_POST['submit']))
   //insert into database
   else
   {
-    $query = "INSERT INTO mess VALUES ('$mname','$mmuname','$p',0,0,0,0,0,0,0,0,0,0,0,0)";
+    $query = "INSERT INTO mess VALUES ('$mname','$mmuname','$p','$f1','$f2',0,0,0,0,0,0,0,0,0,0,0,0)";
     mysqli_query($con,$query);
     $str2= "<center><h2 style='color:green'>Details Saved!</h2></center>";
   }
@@ -79,6 +81,8 @@ if(isset($_POST['submit']))
                   <legend><font size="+2"><strong>Registration</strong></font></legend>
                   <p><b>MESS NAME : </b><input type="text" name="messname" required/>*</p>
                   <p><b>MESS MANAGER USERNAME : </b><input type="text" name="mess_manager_uname" required/>*</p>
+                  <p><b>EMAIL : </b><input type="email" name="mess_manager_email" required/>*</p>
+                  <p><b>CONTACT : </b><input type="text" name="mess_manager_contact" required/>*</p>
                   <p><b>PASSWORD : </b><input type="password" name="pass" required/>*</p>
                   <p><input type="submit" name="submit" value="Register"></p>
                 </form>

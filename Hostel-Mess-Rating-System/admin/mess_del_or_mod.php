@@ -27,11 +27,11 @@ if(isset($_POST['submit']))
 {
     $IS_EDIT_CLICKED = false;
     $n = $_POST['mess_name'];
-    $pass = $_POST['password'];
-    $p = md5($pass);//encrypt pass
-    $f = $_POST('manager_uname');
+    $f = $_POST['manager_uname'];
+    $f1 = $_POST['manager_email'];
+    $f2 = $_POST['manager_contact'];
 
-    $query = "UPDATE mess SET Password = '$p' managerUsername = '$f' WHERE messName = '$n'";
+    $query = "UPDATE mess SET managerUsername = '$f' , email = '$f1' , contact = $f2 WHERE messName = '$n'";
     mysqli_query($con,$query);
     $str2= "<center><h2 style='color:green'>MESS UPDATED!</h2></center>";
 }
@@ -93,6 +93,8 @@ if(isset($_POST['submit']))
             echo "<tr>";
             echo "<td height=\"50\" bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>MESS NAME</b></font></center></td>";
             echo "<td height=\"50\" bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>MESS MANAGER USERNAME</b></font></center></td>";
+            echo "<td height=\"50\" bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>EMAIL</b></font></center></td>";
+            echo "<td height=\"50\" bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>CONTACT</b></font></center></td>";
             echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>ACTION</b></font></center></td>";
             echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>ACTION</b></font></center></td>";
             echo "</tr>";
@@ -102,12 +104,14 @@ if(isset($_POST['submit']))
                 echo "<form method=\"post\">";
                 echo "<td align = \"center\" height=\"40\" bgcolor=\"#B4BEDC\"><input type=\"hidden\" name=\"dummy\" value=\"". $row['messName'] . "\">" . $row['messName'] . "</td>";
                 echo "<td align = \"center\"  bgcolor=\"#B4BEDC\">" . $row['managerUsername'] . "</td>";
+                echo "<td align = \"center\"  bgcolor=\"#B4BEDC\">" . $row['email'] . "</td>";
+                echo "<td align = \"center\"  bgcolor=\"#B4BEDC\">" . $row['contact'] . "</td>";
                 echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input type=\"submit\" name=\"submit_del\" value=\"DELETE\"/> </td>");
                 echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input type=\"submit\" name=\"submit_edit\" value=\"EDIT\"/> </td>");
                 echo "</form>";
                 echo "</tr>";
             }
-            echo "<tr> <td> </td> <td> </td> <td> </td> <td> </td></tr>";
+            echo "<tr> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td></tr>";
             echo "</tbody>";
             echo "</table>";
             ?>
@@ -122,7 +126,8 @@ if(isset($_POST['submit']))
                         <legend><font size="+2"><strong>UPDATE MESS</strong></font></legend>
                         <p><b>MESS NAME : </b><input type="text" name="mess_name" value ="<?php echo $mess_array[0];?>" required readonly/>*</p>
                         <p><b>MESS MANAGER USERNAME : </b><input type="text" name="manager_uname" value ="<?php echo $mess_array[1]; ?>" required/>*</p>
-                        <p><b>PASSWORD : </b><input type="password" name="password" value ="<?php echo $mess_array[2]; ?>" required/>*</p>
+                        <p><b>EMAIL : </b><input type="email" name="manager_email" value ="<?php echo $mess_array[3]; ?>" required/>*</p>
+                        <p><b>CONTACT : </b><input type="text" name="manager_contact" value ="<?php echo $mess_array[4]; ?>" required/>*</p>
                         <p><input type="submit" name="submit" value="UPDATE"></p>
                     </form>
                 </div>

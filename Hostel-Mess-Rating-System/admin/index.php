@@ -21,6 +21,7 @@ if(isset($_POST['admlogin']))
 	}
 }
 ?>
+<body style="background-image:linear-gradient(white,black)">
 <div align="center">
 <form method="post">
 <table width="1067" border="1">
@@ -41,3 +42,4 @@ if(isset($_POST['admlogin']))
 </table>
 </form>
 </div>
+</body>

@@ -30,8 +30,6 @@ if(isset($_POST['submit']))
 {
     $IS_EDIT_CLICKED = false;
     $n = $_POST['uname'];
-    $pass = $_POST['upass'];
-    $p = md5($pass);//encrypt pass
     $em = $_POST['umail'];
     $gen = $_POST['gender'];
     $mob = $_POST['umob'];
@@ -39,7 +37,7 @@ if(isset($_POST['submit']))
     $reshos=$_POST['reshos'];
     $mess=$_POST['mess'];
 
-    $query = "UPDATE users SET password = '$p',email = '$em', gender = '$gen', mob = '$mob', Hostel_Res = '$reshos', Hostel_Mess = '$mess' WHERE roll_no = '$n'";
+    $query = "UPDATE users SET email = '$em', gender = '$gen', mob = '$mob', Hostel_Res = '$reshos', Hostel_Mess = '$mess' WHERE roll_no = '$n'";
     mysqli_query($con,$query);
     $str2= "<center><h2 style='color:green'>PROFILE UPDATED!</h2></center>";
 }
@@ -131,7 +129,6 @@ if(isset($_POST['submit']))
                     <fieldset style="display: inline-flex; background-color: #D8D8D8;">
                         <legend><font size="+2"><strong>UPDATE PROFILE</strong></font></legend>
                         <p><b>UserName (Roll Number) : </b><input type="text" name="uname" value ="<?php echo $user_array[0];?>" required readonly/>*</p>
-                        <p><b>Password : </b><input type="password" name="upass" value ="<?php echo $user_array[1]; ?>" required/>*</p>
                         <p><b>Email : </b><input type="email" name="umail" value ="<?php echo $user_array[2]; ?>" required/>*</p>
                         <p><b>Gender : </b><input type="radio" name="gender" value="m" <?php if($user_array[3]=="m"){echo "checked";} ?>>Male&nbsp;
                             <input type="radio" name="gender" value="f" <?php if($user_array[3]=="f"){echo "checked";} ?>>Female</p>
