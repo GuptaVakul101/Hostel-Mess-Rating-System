@@ -115,7 +115,7 @@ $footerdisp = mysqli_fetch_array($q41);
 				</td>
 			</tr>
 			<tr>
-				<td width="974" height="647" bgcolor="#D9D9D9" style="vertical-align:text-top">
+				<td width="974" height="647" bgcolor="#D9D9D9" style="vertical-align:middle">
 					<?php
 					@$opt = $_GET['option'];
 					if($opt=="")
@@ -125,7 +125,7 @@ $footerdisp = mysqli_fetch_array($q41);
 							<h2><b><font size="+3"><?php echo "Welcome to IITG Mess Management Portal";?>
 							</font></b></h2>
 						</center>
-						<center><img src="images/colg.jpg" width="696" height="488"></center>
+						<center><img src="images/img.jpg" width="696" height="488"></center>
 						<p><center>
 							<p>&nbsp;</p>
 							<p><strong><font size="+2"><?php echo $colgdisp['colgname'];?></font></strong> <b>-</b> <font size="+1"><?php echo $introdisp['colgintro']; ?></font></p>
