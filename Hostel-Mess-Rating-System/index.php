@@ -79,16 +79,16 @@ $footerdisp = mysqli_fetch_array($q41);
 					<!--Slider-->
 					<div id="wowslider-container1">
 						<div class="ws_images"><ul>
-							<li><img src="data1/images/banner_01.jpg" alt="Multispeciality College Campus" title="Multispeciality College Campus" id="wows1_0"/></li>
-							<li><img src="data1/images/highlightnews.jpg" alt="International Accredition" title="International Accredition" id="wows1_1"/></li>
-							<li><img src="data1/images/img21644.jpg" alt="Best Overall Employement" title="Best Overall Employement" id="wows1_2"/></li>
-							<li><img src="data1/images/url.jpg" alt="Best Of Class Infrastructure" title="Best Of Class Infrastructure" id="wows1_3"/></li>
+							<li><img src="data1/images/1.jpg" alt="IITG GETS 7TH RANKING" title="IITG GETS 7TH RANKING" id="wows1_0"/></li>
+							<li><img src="data1/images/2.jpg" alt="BEST INFRASTRUCTURE" title="BEST INFRASTRUCTURE" id="wows1_1"/></li>
+							<li><img src="data1/images/3.jpg" alt="TOP CLASS EDUCATION" title="TOP CLASS EDUCATION" id="wows1_2"/></li>
+							<li><img src="data1/images/4.jpg" alt="BEST MESS SERVICES" title="BEST MESS SERVICES" id="wows1_3"/></li>
 						</ul></div>
 						<div class="ws_bullets"><div>
-							<a href="#" title="Multispeciality College Campus"><img src="data1/tooltips/banner_01.jpg" alt="Multispeciality College Campus"/>1</a>
-							<a href="#" title="International Accredition"><img src="data1/tooltips/highlightnews.jpg" alt="International Accredition"/>2</a>
-							<a href="#" title="Best Overall Employement"><img src="data1/tooltips/img21644.jpg" alt="Best Overall Employement"/>3</a>
-							<a href="#" title="Best Of Class Infrastructure"><img src="data1/tooltips/url.jpg" alt="Best Of Class Infrastructure"/>4</a>
+							<a href="#" title="IITG GETS 7TH RANKING"><img src="data1/tooltips/1.jpg" alt="IITG GETS 7TH RANKING"/>1</a>
+							<a href="#" title="BEST INFRASTRUCTURE"><img src="data1/tooltips/2.jpg" alt="International Accredition"/>2</a>
+							<a href="#" title="BEST INFRASTRUCTURE"><img src="data1/tooltips/3.jpg" alt="BEST INFRASTRUCTURE"/>3</a>
+							<a href="#" title="BEST MESS SERVICES"><img src="data1/tooltips/4.jpg" alt="BEST MESS SERVICES"/>4</a>
 						</div></div>
 						<span class="wsl"></span>
 						<a href="#" class="ws_frame"></a>
