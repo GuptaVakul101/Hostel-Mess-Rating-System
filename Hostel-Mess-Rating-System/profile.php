@@ -132,18 +132,10 @@ if($_SESSION['user']=="")
 							<td width="343" style="background-color:#468EFF">
 								<center><font size="+2"><b style="color:#191B7E"><div style="background-color:#969BFB">College Updates</div><br></b></font></center>
 								<marquee direction="up" height="100%" onMouseOver="this.stop();" onMouseOut="this.start();">
-									<center><a href="" style="text-decoration:none"><font size="+1"><b>Campus Drive</b></font></a></center><br>
-									<center><a href="" style="text-decoration:none"><font size="+1"><b>News</b></font></a></center><br>
-									<center><a href="" style="text-decoration:none"><font size="+1"><b>Sports Fest</b></font></a></center><br>
-									<center><a href="" style="text-decoration:none"><font size="+1"><b>Quiz Competition</b></font></a></center><br>
-									<center><a href="" style="text-decoration:none"><font size="+1"><b>Admission 2014</b></font></a></center><br>
-									<center><a href="" style="text-decoration:none"><font size="+1"><b>Placement List</b></font></a></center><br>
-									<center><a href="" style="text-decoration:none"><font size="+1"><b>Weekend Events</b></font></a></center><br>
-									<center><a href="" style="text-decoration:none"><font size="+1"><b>Notice Board</b></font></a></center><br>
-									<center><a href="" style="text-decoration:none"><font size="+1"><b>Summer Vacation</b></font></a></center><br>
-									<center><a href="" style="text-decoration:none"><font size="+1"><b>Summer Training</b></font></a></center><br>
-									<center><a href="index.php?option=course" style="text-decoration:none"><font size="+1"><b>Courses Offered</b></font></a></center><br>
-									<center><a href="index.php?option=gallery" style="text-decoration:none"><font size="+1"><b>Gallery</b></font></a></center><br>
+									<center><a href="http://www.iitg.ac.in/home/pagesin/1" style="text-decoration:none"><font size="+1"><b>About IITG</b></font></a></center><br>
+									<center><a href="http://intranet.iitg.ernet.in/" style="text-decoration:none"><font size="+1"><b>Intranet</b></font></a></center><br>
+									<center><a href="https://intranet.iitg.ernet.in/cb/index.php" style="text-decoration:none"><font size="+1"><b>Complain Booking</b></font></a></center><br>
+									<center><a href="https://202.141.80.5/~hab/" style="text-decoration:none"><font size="+1"><b>Hostel Affairs Board</b></font></a></center><br>
 								</marquee>
 							</td>
 						</tr>
