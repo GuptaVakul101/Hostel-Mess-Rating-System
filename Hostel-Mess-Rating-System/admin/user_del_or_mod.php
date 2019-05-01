@@ -110,8 +110,8 @@ if(isset($_POST['submit']))
                 echo "<td align = \"center\" height=\"40\" bgcolor=\"#B4BEDC\"><input type=\"hidden\" name=\"dummy\" value=\" ". $row['roll_no'] . "\">" . $row['roll_no'] . "</td>";
                 echo "<td align = \"center\"  bgcolor=\"#B4BEDC\">" . $row['email'] . "</td>";
                 echo "<td align = \"center\"  bgcolor=\"#B4BEDC\">" . $row['Hostel_Mess'] . "</td>";
-                echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input type=\"submit\" name=\"submit_del\" value=\"DELETE\"/> </td>");
-                echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input type=\"submit\" name=\"submit_edit\" value=\"EDIT\"/> </td>");
+                echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input class=\"btn btn-danger\" type=\"submit\" name=\"submit_del\" value=\"DELETE\"/> </td>");
+                echo("<td align = \"center\"  bgcolor=\"#B4BEDC\"><input class=\"btn btn-info\" type=\"submit\" name=\"submit_edit\" value=\"EDIT\"/> </td>");
                 echo "</form>";
                 echo "</tr>";
             }
@@ -155,7 +155,7 @@ if(isset($_POST['submit']))
                                         ?>
                                     </select>
                                     *</p>
-                                    <p><input type="submit" name="submit" value="UPDATE"></p>
+                                    <p><input class="btn btn-success" type="submit" name="submit" value="UPDATE"></p>
                                 </form>
                             </div>
                             <?php

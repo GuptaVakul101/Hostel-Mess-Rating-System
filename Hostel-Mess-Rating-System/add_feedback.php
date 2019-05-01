@@ -42,6 +42,6 @@ if(isset($_POST['submit']))
             <legend><font size="+2"><strong>FEEDBACK FORM</strong></font></legend>
             <p><b>MESS SUBSRIBED : <?php echo $mess_subsribed ; ?></b>*</p>
             <p><b>FEEDBACK : </b><textarea class="FormElement" name="term" id="term" cols="40" rows="4" wrap="soft"></textarea>*</p>
-            <p><input type="submit" name="submit" value="ADD FEEDBACK"></p>
+            <p><input class="btn btn-success" type="submit" name="submit" value="ADD FEEDBACK"></p>
         </form>
     </div>

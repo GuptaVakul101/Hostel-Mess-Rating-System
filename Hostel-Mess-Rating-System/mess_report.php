@@ -52,7 +52,7 @@ if(isset($_POST['submit']))
   ?>
 </select>
 </h2>
-<p><input type="submit" name="submit" value="SELECT"></p>
+<p><input class="btn btn-info" type="submit" name="submit" value="SELECT"></p>
 </form>
 </div>
 

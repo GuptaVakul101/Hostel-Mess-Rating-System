@@ -118,7 +118,7 @@ if(isset($_POST['submit_reject']))
                                         <option value=10>10</option>
                                     </select>
                                     *</p>
-                                    <p><input type="submit" name="submit_man" value="ADD"></p>
+                                    <p><input class="btn btn-success" type="submit" name="submit_man" value="ADD KEYWORD"></p>
                                 </form>
                             </div>
                             <div align="center">
@@ -147,8 +147,8 @@ if(isset($_POST['submit_reject']))
                                             <option value=10>10</option>
                                         </select>
                                         *</p>
-                                        <p><input type="submit" name="submit_req" value="ADD"></p>
-                                        <p><input type="submit" name="submit_reject" value="REJECT"></p>
+                                        <p><input class="btn btn-success" type="submit" name="submit_req" value="ADD KEYWORD">
+                                        <input class="btn btn-danger" type="submit" name="submit_reject" value="REJECT KEYWORD"></p>
                                     </form>
                                 </div>
                             </td>

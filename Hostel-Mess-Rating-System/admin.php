@@ -23,7 +23,7 @@ if(isset($_POST['admlogin']))
 ?>
 <div align="center">
 <form method="post">
-<table width="1067" height="493" border="1">
+<table width="1067" height="493" border="1" align = "center">
   <tbody>
     <tr>
       <td width="1057" height="59" bgcolor="#4D4C94"><center>

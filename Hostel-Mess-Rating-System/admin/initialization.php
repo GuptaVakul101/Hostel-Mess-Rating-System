@@ -101,8 +101,8 @@ if(isset($_POST["submit2"])){
 <body style="background-color:#E5E5E5">
     <div align = "center" style = "border-style: solid" height = "200" wrap="hard">
         <form method="post" enctype="multipart/form-data">
-            <p><input type="submit" name="submit" value="EVALUATE FEEDBACK"></p>
-            <p><input type="submit" name="submit2" value="CHANGE CURRENT MONTH"></p>
+            <p><input class="btn btn-info" type="submit" name="submit" value="EVALUATE FEEDBACK"></p>
+            <p><input class="btn btn-info" type="submit" name="submit2" value="CHANGE CURRENT MONTH"></p>
         </form>
     </div>
     <?php echo $str10 ?>

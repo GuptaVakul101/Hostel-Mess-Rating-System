@@ -84,7 +84,7 @@ if(isset($_POST['submit']))
                   <p><b>EMAIL : </b><input type="email" name="mess_manager_email" required/>*</p>
                   <p><b>CONTACT : </b><input type="text" name="mess_manager_contact" required/>*</p>
                   <p><b>PASSWORD : </b><input type="password" name="pass" required/>*</p>
-                  <p><input type="submit" name="submit" value="Register"></p>
+                  <p><input class="btn btn-success" type="submit" name="submit" value="Register"></p>
                 </form>
               </div>
             </td>

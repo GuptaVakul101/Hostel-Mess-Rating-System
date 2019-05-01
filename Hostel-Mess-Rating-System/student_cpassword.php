@@ -44,7 +44,7 @@ if(isset($_POST['submit']))
               <p><b>Old Password : </b><input type="password" name="opass" required/>*</p>
               <p><b>New Password : </b><input type="password" name="npass" required/>*</p>
               <p><b>Retype New Password : </b><input type="password" name="npass2" required/>*</p>
-              <p><input type="submit" name="submit" value="Change Password"></p>
+              <p><input class="btn btn-info" type="submit" name="submit" value="Change Password"></p>
             </form>
           </div>
         </td>

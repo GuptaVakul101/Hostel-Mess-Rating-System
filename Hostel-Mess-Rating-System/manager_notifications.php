@@ -39,7 +39,7 @@ while ($row = mysqli_fetch_assoc($cq)) {
         echo "<td align = \"center\" height=\"30\" bgcolor=\"#FF0000\"><input type=\"hidden\" name=\"dummy\" value=\"". $row['ID'] . "\">" . $row['ID'] . "</td>";
         echo "<td align = \"center\" bgcolor=\"#FF0000\">" . $row['Timestamp'] . "</td>";
         echo "<td align = \"center\" bgcolor=\"#FF0000\">" . $row['Title'] . "</td>";
-        echo("<td bgcolor=\"#FF0000\" align = \"center\"><input type=\"submit\" name=\"view\" value=\"VIEW\"/> </td>");
+        echo("<td bgcolor=\"#FF0000\" align = \"center\"><input class=\"btn btn-danger\" type=\"submit\" name=\"view\" value=\"VIEW\"/> </td>");
         echo "</form>";
         echo "</tr>";
     }else{
@@ -48,7 +48,7 @@ while ($row = mysqli_fetch_assoc($cq)) {
         echo "<td align = \"center\" height=\"30\" bgcolor=\"#B4BEDC\"><input type=\"hidden\" name=\"dummy\" value=\"". $row['ID'] . "\">" . $row['ID'] . "</td>";
         echo "<td align = \"center\" bgcolor=\"#B4BEDC\">" . $row['Timestamp'] . "</td>";
         echo "<td align = \"center\" bgcolor=\"#B4BEDC\">" . $row['Title'] . "</td>";
-        echo("<td bgcolor=\"#B4BEDC\" align = \"center\"><input type=\"submit\" name=\"view\" value=\"VIEW\"/> </td>");
+        echo("<td bgcolor=\"#B4BEDC\" align = \"center\"><input class=\"btn btn-info\" type=\"submit\" name=\"view\" value=\"VIEW\"/> </td>");
         echo "</form>";
         echo "</tr>";
     }
