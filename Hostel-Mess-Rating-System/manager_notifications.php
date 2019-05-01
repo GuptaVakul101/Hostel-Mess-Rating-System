@@ -11,7 +11,6 @@ if(isset($_POST['view']))
     $id=substr($id,1,strlen($id)-2);
     $query = "SELECT * FROM Notifications WHERE ID=";
     $query=$query."'$id'"." ORDER BY Priority DESC , Timestamp ASC";
-    echo $query;
     $details_noti = mysqli_query($con,$query);
     $noti_array = mysqli_fetch_array($details_noti,MYSQLI_NUM);
 }

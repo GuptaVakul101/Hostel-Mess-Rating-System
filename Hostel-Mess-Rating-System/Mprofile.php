@@ -110,9 +110,6 @@ if($_SESSION['user']=="")
 									case 'cpassword':
 									include('manager_cpassword.php');
 									break;
-									case 'cmess':
-									include('student_cmess.php');
-									break;
 									case 'mess_report':
 									include('mess_report.php');
 									break;
@@ -120,7 +117,7 @@ if($_SESSION['user']=="")
 									include('manager_notifications.php');
 									break;
 									default:
-									include('student_myprofile');
+									include('about.php');
 									break;
 								}
 
