@@ -23,7 +23,7 @@ if($_POST['c1']==$_POST['c2'])
 	$mob = $_POST['umob'];
 	$add = $_POST['address'];
 	//$img = $_FILES['file']['name'];
-	
+
 //check user if already exists
 $q = "SELECT mob FROM users WHERE mob='$mob'";
 $cq = mysqli_query($con,$q);
@@ -52,11 +52,11 @@ else
 if(isset($_POST['display']))
 {
 	$que = mysqli_query($con,"select * from users");
-	
+
 	echo "<div align='center'>";
 	echo "<table border='1' bgcolor='#B2B8FF' width='500px'>";
 	echo "<tr><th>User ID</th><th>UserName</th><th>Password<br>(Encrypted)</th><th>Email</th><th>Gender</th><th>Mobile No.</th><th>Image</th><th>Option</th></tr>";
-	
+
 	while($row= mysqli_fetch_array($que))
 	{
 	echo "<tr>";
@@ -66,12 +66,12 @@ if(isset($_POST['display']))
 	echo "<td>".$row['email']."</td>";
 	echo "<td>".$row['gender']."</td>";
 	echo "<td>".$row['mob']."</td>";
-	
+
 	$e=$row['email'];
 	$img=$row['image'];
-	
+
 	echo "<td><img src='images/$e/$img' width='70' height='70'/></td>";
-	
+
 	echo "<td><a href='edit.php'>Edit</a>&nbsp;&nbsp;
 		<a href='delete.php?email=$e'>Delete</a>
 	</td>";

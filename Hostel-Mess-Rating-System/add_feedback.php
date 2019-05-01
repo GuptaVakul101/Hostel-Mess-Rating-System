@@ -17,6 +17,7 @@ if(isset($_POST['submit']))
     $feedback = $_POST['term'];
     $feedback = trim($feedback);
     $feedback = preg_replace('/[^A-Za-z0-9 ]/', '', $feedback);
+    $feedback = strtolower($feedback);
     $words = explode(" ", $feedback);
     $help2 = "Feedback_".$current_month;
     $query = "UPDATE users SET $help2 = '$feedback' WHERE roll_no = $user";

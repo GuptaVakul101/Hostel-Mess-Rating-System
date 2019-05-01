@@ -43,17 +43,18 @@ if(isset($_POST['submit']))
     $feedback12 = $details_mess[14];
 }
 ?>
-
+<div align = "center">
 <form method="post" enctype="multipart/form-data">
-<p><b>Mess Subscribed : </b>
+<h2><b>Mess Subscribed : </b>
   <select name="mess" required/>
   <?php
   echo $str;
   ?>
 </select>
-*</p>
+</h2>
 <p><input type="submit" name="submit" value="SELECT"></p>
 </form>
+</div>
 
 
 <h1><center>CURRENT YEAR PERFORMANCE OF THE MESS</center></h1>
