@@ -10,6 +10,7 @@ if($_SESSION['user']=="")
 
 ?>
 <html>
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"></head>
 <head>
 	<title>Sample School Project</title>
 	<link rel="stylesheet" type="text/css" href="engine/css/slideshow.css" media="screen" />

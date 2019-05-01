@@ -29,6 +29,7 @@ $footerdisp = mysqli_fetch_array($q41);
 
 ?>
 <html>
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"></head>
 <head>
 	<title>HOSTEL MESS RATING SYSTEM</title>
 	<link rel="stylesheet" type="text/css" href="engine/css/slideshow.css" media="screen" />
