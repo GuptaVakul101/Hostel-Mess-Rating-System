@@ -26,8 +26,8 @@ if (mysqli_num_rows($query_result) > 0) {
 
   }
 }
-
 ?>
+
 <?php
 $timestamp = time();
 $q1 = "SELECT * FROM users";
