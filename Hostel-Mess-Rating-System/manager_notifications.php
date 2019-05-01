@@ -20,20 +20,26 @@ if(isset($_POST['view']))
 <?php
 $q = "SELECT * FROM Notifications WHERE Destination = '$user'";
 $cq = mysqli_query($con,$q);
-echo "<table height=\"200\" style=\"overflow:scroll\">";
+echo "<div align=\"center\">";
+// width="725" height="346" border="1"
+echo "<table width=\"725\" height=\"346\" border=\"1\" style=\"overflow:scroll\">";
 echo "<tbody>";
+echo "<tr>";
+  echo "<td height=\"50\" bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>ID</b></font></center></td>";
+  echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>TITLE</b></font></center></td>";
+  echo "<td bgcolor=\"#7179CF\" style=\"color: #FFFFFF\"><center><font size=\"+2\"><b>ACTION</b></font></center></td>";
+echo "</tr>";
 while ($row = mysqli_fetch_assoc($cq)) {
     $id = $row['ID'];
     echo "<tr>";
-    echo "<td>";
     echo "<form method=\"post\">";
-    echo "<td><input type=\"hidden\" name=\"dummy\" value=\"". $row['ID'] . "\">" . $row['ID'] . "</td>";
-    echo "<td>" . $row['Title'] . "</td>";
-    echo('<td><input type="submit" name="view" value="VIEW"/> </td>');
+    echo "<td align = \"center\" height=\"30\" bgcolor=\"#B4BEDC\"><input type=\"hidden\" name=\"dummy\" value=\"". $row['ID'] . "\">" . $row['ID'] . "</td>";
+    echo "<td align = \"center\" bgcolor=\"#B4BEDC\">" . $row['Title'] . "</td>";
+    echo("<td bgcolor=\"#B4BEDC\" align = \"center\"><input type=\"submit\" name=\"view\" value=\"VIEW\"/> </td>");
     echo "</form>";
-    echo "</td>";
     echo "</tr>";
 }
+echo "<tr> <td> </td> <td> </td> <td> </td> </tr>";
 echo "</tbody>";
 echo "</table>";
 ?>
@@ -42,12 +48,14 @@ echo "</table>";
 
 if($IS_EDIT_CLICKED){
     ?>
-    <div align = "center">
+    <br>
+    <br>
+    <div align = "center" style = "border-style: inset" height = "200">
         <!-- <form method="post" enctype="multipart/form-data">
             <fieldset style="display: inline-flex; background-color: #D8D8D8;"> -->
-
                 <legend><font size="+2"><strong>DESCRIPTION</strong></font></legend>
-                <p><b> </b><textarea class="FormElement" name="term" id="term" cols="40" rows="4" wrap="hard"><?php echo $noti_array[2];?></textarea>*</p>
+                <!-- <p><b> </b><textarea class="FormElement" name="term" id="term" cols="40" rows="4" wrap="hard"></textarea>*</p> -->
+                <p><b><?php echo $noti_array[2];?></b></p>
             <!-- </form> -->
         </div>
         <?php

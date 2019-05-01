@@ -15,6 +15,8 @@ $current_month = $help[3];
 if(isset($_POST['submit']))
 {
     $feedback = $_POST['term'];
+    $feedback = trim($feedback);
+    $feedback = preg_replace('/[^A-Za-z0-9 ]/', '', $feedback);
     $words = explode(" ", $feedback);
     $help2 = "Feedback_".$current_month;
     $query = "UPDATE users SET $help2 = '$feedback' WHERE roll_no = $user";
@@ -24,8 +26,10 @@ if(isset($_POST['submit']))
         $query = "SELECT * FROM Feedback WHERE Keyword = $words[$x]";
         $cq2 = mysqli_query($con,$query);
         if(mysqli_num_rows($cq2) == 0){
-            $query = "INSERT INTO Feedback VALUES ('$words[$x]',0,0,0)";
-            mysqli_query($con,$query);
+            if(strlen($words[$x])>0){
+                $query = "INSERT INTO Feedback VALUES ('$words[$x]',0,0,0)";
+                mysqli_query($con,$query);
+            }
         }
     }
 }

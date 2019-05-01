@@ -38,6 +38,16 @@ if(isset($_POST['submit_req']))
     $query = "UPDATE Feedback SET Rating = $req_rating , is_Keyword = 1 WHERE Keyword = '$req_keyword'";
     mysqli_query($con,$query);
     $str2= "<center><h2 style='color:green'>KEYWORD ADDED SUCCESSFULLY!!</h2></center>";
+    // echo "<script> document.location = "
+}
+
+if(isset($_POST['submit_reject']))
+{
+    $req_keyword = $_POST['req_keyword'];
+    $req_rating = $_POST['req_rating'];
+    $query = "UPDATE Feedback SET is_Rejected = 1 WHERE Keyword = '$req_keyword'";
+    mysqli_query($con,$query);
+    $str2= "<center><h2 style='color:green'>KEYWORD REJECTED SUCCESSFULLY!!</h2></center>";
 }
 
 ?>
@@ -138,6 +148,7 @@ if(isset($_POST['submit_req']))
                                         </select>
                                         *</p>
                                         <p><input type="submit" name="submit_req" value="ADD"></p>
+                                        <p><input type="submit" name="submit_reject" value="REJECT"></p>
                                     </form>
                                 </div>
                             </td>
