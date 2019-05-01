@@ -100,7 +100,7 @@ if($_SESSION['user']=="")
 								switch($opt)
 								{
 									case 'student_myprofile':
-									include('about.php');
+									include('student_myprofile.php');
 									break;
 									case 'about':
 									include('about.php');
