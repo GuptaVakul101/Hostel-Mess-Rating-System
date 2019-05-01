@@ -99,7 +99,7 @@ if($_SESSION['user']=="")
 								switch($opt)
 								{
 									case 'manager_myprofile':
-									include('about.php');
+									include('manager_myprofile.php');
 									break;
 									case 'about':
 									include('about.php');
